@@ -117,4 +117,5 @@ module PBTrainers
   LEADER_Jasmine = 112
   POLICE = 113
   SKIER_F = 114
+  MODDED = 117
 end

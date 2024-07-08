@@ -6,3 +6,7 @@ Graphics/Pokemon/FusionIcons/*
 Data/SPRITE_CREDS
 Data/VERSION
  
+Data/encounters_randomized.dat
+PBS/trainertypesmodded.txt
+Data/debuglog.txt
+Data/encounters_randomized.dat

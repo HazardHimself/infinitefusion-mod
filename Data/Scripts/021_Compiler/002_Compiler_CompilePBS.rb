@@ -1209,7 +1209,7 @@ module Compiler
         when "Pokemon"
           current_pkmn = {
             :species => property_value[0],
-            :level   => property_value[1]
+            :level   => [property_value[1]-1,1].max
           }
           trainer_hash[line_schema[0]].push(current_pkmn)
         else
@@ -1241,6 +1241,16 @@ module Compiler
             else
               current_pkmn[line_schema[0]] = property_value.to_sym
             end
+          when "Gender"
+            case property_value
+            when "1"
+              current_pkmn[line_schema[0]] = 1
+            when "0"
+              current_pkmn[line_schema[0]] = 0
+            else
+              current_pkmn[line_schema[0]] = 2
+            end
+            echoln _INTL("{1}",property_value)
           else
             current_pkmn[line_schema[0]] = property_value
           end
